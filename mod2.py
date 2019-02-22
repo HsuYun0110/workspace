@@ -1,0 +1,34 @@
+import random
+list=[]
+for i in range(1,40):
+    list.append(i)
+random.shuffle(list)
+list=list[0:5]
+list.sort()
+a=int(input("輸入第1個號碼:"))
+b=int(input("輸入第2個號碼:"))
+c=int(input("輸入第3個號碼:"))
+print('你的號碼',a,b,c)
+print('本日獎號',list)
+for x in range(5):
+    if a==list[x] and b==list[x] and c==list[x]:
+        print('恭喜中三合')
+
+    elif a==list[x] and b==list[x] and c!=list[x]:
+            print('恭喜中二合')
+    elif a==list[x] and b!=list[x] and c==list[x]:
+        print('恭喜中二合')
+    elif a!=list[x] and b==list[x] and c==list[x]:
+        print('恭喜中二合')
+    elif a != list[x] and b != list[x] and c == list[x]:
+        print('可惜只中一個')
+    elif a == list[x] and b != list[x] and c != list[x]:
+        print('可惜只中一個')
+    elif a != list[x] and b == list[x] and c != list[x]:
+        print('可惜只中一個')
+else :
+    print('槓龜')
+
+
+
+
